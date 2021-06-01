@@ -10,8 +10,8 @@
 let  todoList=[
     {
         id:1,
-        discription:"want to add custom css fro this",
-        finished:false
+        discription:"want to add custom css for this",
+        finished:true
     },
     {   
         id:2,
@@ -25,6 +25,11 @@ let  todoList=[
     },{
         id:4,
         discription:"send the app",
+        finished:false
+    }
+    ,{
+        id:5,
+        discription:"Finish the app",
         finished:false
     }
 ];

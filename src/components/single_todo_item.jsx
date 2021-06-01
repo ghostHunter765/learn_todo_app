@@ -9,17 +9,15 @@ class SingleItem extends Component {
                     className="checkbox"
                     type="checkbox"
                     checked={this.props.finished}
-                    onChange={this.props.handler(this.props.id)}
+                    onChange={() => this.props.handler(this.props.id)}
                 ></input>
                 <label
                     id={"lable_" + this.props.id}
                     className={this.props.finished ? "items items-checked" : "items"}
                 >{this.props.discription}</label>
+                <hr />
             </div>
         );
-    }
-    setChange(id) {
-        console.log("changed!");
     }
 }
 

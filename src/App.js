@@ -14,7 +14,7 @@ class App extends Component {
     render() { 
         return ( 
             <div>
-                <nav>
+                <nav className="navbar">
                     <h1 style={{textAlign: "center"}}>TODO</h1>
                 </nav>
                 <div className="itemdiv-main"> 
@@ -36,7 +36,13 @@ class App extends Component {
          );
     }
     handleChange(id){
-        console.log("item Changed!"+id);
+        console.log(`Item ${id} Changed1`)
+        this.setState(
+            (prevState)=>{
+                prevState.todoList[id-1].finished=!prevState.todoList[id-1].finished;
+                return prevState.todoList;
+            }
+        )
     }
 
 }
